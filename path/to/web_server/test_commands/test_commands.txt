@@ -1,0 +1,31 @@
+* Delete
+	curl -X DELETE -H "Content-Type: application/json" -d '{"id":12}' http://localhost:8080/deleteProfile
+
+* Insert user
+	curl -X POST -d "name=John Doe&email=john.doe@example.com&phone=1234567890&description=This is a test description" http://localhost:8080/submit
+
+* Delete user
+	curl -X DELETE http://localhost:8080/deleteProfile \
+	-H "Content-Type: application/json" \
+	-d '{"id":16}' <------ change number
+
+* Switch page to different pages
+	curl -X GET http://localhost:8080/index.html
+	curl -X GET http://localhost:8080/allProfiles.html
+	curl -X GET 'http://localhost:8080/profile?id=14'
+
+* to test server name
+curl --resolve example2.com:4080:127.0.0.1 http://example2.com:4080/index.html
+
+* unkonwn request
+curl -X FOO http://localhost:8080/index.html
+
+
+* with host name
+curl -i http://127.0.0.1:8080/index.html
+
+
+* siege test
+siege -b http://localhost:8080/empty.html
+-------------------
+

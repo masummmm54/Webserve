@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Page</title>
+	<link rel="stylesheet" href="styles/indexStyles.css">
+	<link rel="icon" href="MainBefore.webp" type="image/x-webp">
+</head>
+
+<body>
+	<h1>Welcome to the Home Page</h1>
+	<div class="container">
+		<nav>
+			<button onclick="location.href='/allProfiles.html'">Go to Profile pages</button>
+			<button onclick="location.href='/tableTennis.html'">Go to Table Tennis Page</button>
+			<button onclick="location.href='/cgiTest.html'">Go to CGI Test Page</button>
+			<button onclick="location.href='/upload.html'">Go to Upload Page</button>
+			<button onclick="location.href='/download'">Go to Download Page</button>
+		</nav>
+
+		<h3>Add new User to database (POST request)</h3>
+		<form action="/submit_user" method="POST">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+
+			<label for="email">Email:</label>
+			<input type="text" id="email" name="email" required>
+
+			<label for="phone">Phone:</label>
+			<input type="text" id="phone" name="phone">
+
+			<label for="description">Description:</label>
+			<textarea id="description" name="description"></textarea>
+
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+</body>
+
+</html>
